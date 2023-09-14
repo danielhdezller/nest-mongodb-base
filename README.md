@@ -34,5 +34,4 @@ $ yarn test
 
 - Author - [Daniel Hernández](https://github.com/danielhdezller)
 - LinkedIn - [LinkedIn](https://www.linkedin.com/in/daniel-hernandez-ller/)
-
-![Bye, have a wonderful time!](goodby.gif)
+![officer-peña](https://github.com/danielhdezller/nest-mongodb-base/assets/63543622/a90a29e9-d413-4be6-86e1-a720b88d70d7)
