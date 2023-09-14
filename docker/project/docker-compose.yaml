@@ -1,0 +1,33 @@
+version: "3.4"
+
+services:
+  base_mongodb:
+    image: mongo:6-jammy
+    ports:
+      - "27018:27017"
+    volumes:
+      - dbdata6:/data/db
+    networks:
+      - base-network
+  nest-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: "no"
+    ports:
+      - ${NODE_PORT:-3000}:3000
+      - ${NODE_DEBUGGER_PORT:-9229}:9229
+      - ${NODE_DEBUGGER_TEST_PORT:-9230}:9230
+    networks:
+      - base-network
+    volumes:
+      - ../../project:/usr/src/project
+      - ./entrypoint.sh:/entrypoint.sh
+    depends_on:
+      - base_mongodb
+
+volumes:
+  dbdata6:
+networks:
+  base-network:
+    driver: bridge
