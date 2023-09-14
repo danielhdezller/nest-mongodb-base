@@ -1,6 +1,6 @@
-# Nest Base Project with PostgreSQL
+# Nest Base Project with MongoDb
 
-A Nestjs with PostgreSql template to start a new project.
+A Nestjs with MongoDb template to start a new project.
 
 ## Steps to run the project:
 
